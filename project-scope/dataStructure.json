@@ -1,0 +1,23 @@
+
+{
+    "applications": [
+        {
+            "companyName": "Slack",
+            "field" : [
+                "technology", "communication"
+            ],
+            "url" : "https://www.linkedin.com/jobs/search/?currentJobId=3492463243&keywords=front%20end%20developer&refresh=true",
+            "skills": [
+                "css", "javascript", "html", "typescript", "websocket"
+            ],
+            "contactInformation": "",
+            "keyInformation": "3-15+ years of experience writing client-side JavaScript and React Framework",
+            "postApplicationNote": "",
+            "date": "Fri February 24 2023"
+            
+        }
+    ]
+
+
+
+}
