@@ -101,7 +101,8 @@ ulElement.addEventListener('click', function(e){
     if (e.target.tagName === 'I') {
         updateSubmitted(e.target);
 
-        addToSubbmitted();
+        console.log(e.target.parentElement.parentElement.parentElement);
+        addToSubmitted(e.target.parentElement.parentElement.parentElement.id);
     }
 
 })
@@ -112,10 +113,10 @@ function updateSubmitted(icon){
 };
 
 
-// add the subbmitted pile
-function addToSubbmitted(companyKey){
-
-    get(child(applicationsRef, `${companyKey}`)).then(function(snapshot){
+// add the submitted pile
+function addToSubmitted(companyKey){
+    console.log(companyKey);
+    get(child(applicationsRef, `/${companyKey}`)).then(function(snapshot){
 
         const selectedApplication = snapshot.val();
         console.log(selectedApplication)
@@ -127,7 +128,7 @@ function addToSubbmitted(companyKey){
         const skills = selectedApplication.skills;
         const notes = selectedApplication.notes;
        
-        const subbmittedApps = {
+        const submittedApps = {
             companyName: name,
             field: field,
             link: link,
@@ -137,7 +138,7 @@ function addToSubbmitted(companyKey){
             submitted: true
         }
 
-        push(submissionsRef, subbmittedApps)
+        push(submissionsRef, submittedApps)
 
     })
 
