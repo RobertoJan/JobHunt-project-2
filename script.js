@@ -9,7 +9,8 @@ const submissionsRef = ref(database, '/submittedApps');
 
 
 const formElement = document.querySelector('form');
-const ulElement = document.querySelector('ul');
+const ulApp = document.querySelector('#ulApp');
+const ulSub = document.querySelector('#ulSub');
 
 const companyName = document.querySelector('#companyName');
 const companyField = document.querySelector('#companyField');
@@ -59,7 +60,7 @@ onValue(applicationsRef, function(data){
         const companyInfo = data.val();
         // console.log(companyInfo)
 
-        ulElement.innerHTML ="";
+        ulApp.innerHTML ="";
 
         for (let key in companyInfo){
             // console.log(key)
@@ -91,13 +92,13 @@ onValue(applicationsRef, function(data){
             div.append(button, button2);
             li.id = companyKey
             li.append(div);
-            ulElement.append(li);
+            ulApp.append(li);
         }
     }
 })
 
 // Click to check the submitted data
-ulElement.addEventListener('click', function(e){
+ulApp.addEventListener('click', function(e){
     if (e.target.tagName === 'I') {
         updateSubmitted(e.target);
 
@@ -143,3 +144,45 @@ function addToSubmitted(companyKey){
     })
 
 }
+
+onValue(submissionsRef, function(data){
+    if(data.exists()){
+        const companyInfo = data.val();
+        // console.log(companyInfo)
+
+        ulSub.innerHTML ="";
+
+        for (let key in companyInfo){
+            // console.log(key)
+            const company = companyInfo[key].companyName;
+            const companyContact = companyInfo[key].contactInfo;
+            const companyLink = companyInfo[key].link;
+            const companyField = companyInfo[key].field;
+            const companySkills = companyInfo[key].skills;
+            const companyNotes = companyInfo[key].notes;
+            const companyKey = key;
+
+            // console.log(company, companyContact, companyLink, companyField, companySkills, companyNotes)
+
+            const li = document.createElement('li');
+            const div = document.createElement('div');
+            const button = document.createElement('button');
+            const button2 = document.createElement('button');
+
+            li.innerHTML = `<h4>Company: ${company}</h4>
+            <p>Field: ${companyField}</p>
+            <p>URL: ${companyLink}</p>
+            <p>Conacts: ${companyContact}</p>
+            <p>Skills: ${companySkills}</p>
+            <p>Notes: ${companyNotes}</p>
+            `
+            button.innerHTML = `<i class="fa-regular fa-square"></i>`
+            button2.innerHTML = `<i class="fa-soild fa-x"></i>`
+
+            div.append(button, button2);
+            li.id = companyKey
+            li.append(div);
+            ulSub.append(li);
+        }
+    }
+})
