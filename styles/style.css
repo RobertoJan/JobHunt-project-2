@@ -228,8 +228,9 @@ html {
 
 header {
   background-color: #33ceff;
-  height: 100vh;
+  height: 60vh;
   color: #fff;
+  margin-bottom: 50px;
 }
 header div {
   display: -webkit-box;

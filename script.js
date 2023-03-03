@@ -61,6 +61,8 @@ onValue(applicationsRef, function(data){
 
         ulApp.innerHTML ="";
 
+        let counter = 0
+
         for (let key in companyInfo){
             // console.log(key)
             const company = companyInfo[key].companyName;
@@ -91,7 +93,13 @@ onValue(applicationsRef, function(data){
             li.id = companyKey
             li.append(div);
             ulApp.append(li);
+            
         }
+    } else{
+        
+        ulApp.innerHTML="Please try harder"
+
+
     }
 })
 
@@ -188,7 +196,9 @@ onValue(submissionsRef, function(data){
             li.append(div);
             ulSub.append(li);
         }
-    } 
+    } else {
+        ulSub.innerHTML = 'This should not be empty....'
+    }
     
 })
 
