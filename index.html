@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,700&family=Fira+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 
 </head>
@@ -19,7 +21,7 @@
                     <a href="./index.html"><img src="./assets/logo-no-background.png" alt="JobHunt Logo"></a>
                 </div>
                 <ul class="flexItems">
-                    <li><a href="./index.html">HOME</a></li>
+                    <li><a href="./index.html">Home</a></li>
                     <li><a href="#formSection">Form</a></li>
                     <li><a href="#ulApp">Apps</a></li>
                     <li><a href="#ulSub">Subs</a></li>
@@ -37,20 +39,20 @@
     <main>
         <section id="formSection" class="userInputs">
             <div class="wrapper">
-                <h2>Take Action</h2>
+                <h2 id="form">Take Action</h2>
 
-                <form action="#" method="post" name="commentForm" id="form">
+                <form action="#" method="post" name="commentForm">
                     <div>
                         <lable for="companyName" class="sr-only">Company</lable>
                         <input type="text" placeholder="Company" id="companyName" required>
 
-                        <lable for="companyField" class="sr-only">CompanyField</lable>
-                        <input type="text" placeholder="Field" id="companyField" required>
+                        <lable for="companyUrl" class="sr-only">Url</lable>
+                        <input type="text" placeholder="Url" id="companyUrl" required>
                     </div>  
 
                     <div>
-                        <lable for="companyUrl" class="sr-only">Url</lable>
-                        <input type="text" placeholder="Url" id="companyUrl" required>
+                        <lable for="companyField" class="sr-only">CompanyField</lable>
+                        <input type="text" placeholder="Field" id="companyField" required>
 
                         <lable for="contactInfo" class="sr-only">Contact Info</lable>
                         <input type="text" placeholder="Contact Info" id="contactInfo" required>
