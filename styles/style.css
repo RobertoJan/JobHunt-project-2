@@ -460,14 +460,25 @@ fieldset textarea {
 }
 #ulApp li,
 #ulSub li {
-  border: 2px solid #fff;
+  border: 2px solid #002242;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
+  background: #002242;
+  -webkit-box-shadow: 10px 5px 5px black;
+          box-shadow: 10px 5px 5px black;
 }
 #ulApp li p,
 #ulSub li p {
   margin: 10px 0;
+}
+#ulApp li:hover,
+#ulSub li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 #ulSub {

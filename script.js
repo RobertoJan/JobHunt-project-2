@@ -44,12 +44,12 @@ formElement.addEventListener("submit", function(e){
 
         push(applicationsRef, companyInfoObj)
 
-        companyNameInput = '';
-        companyFieldInput = '';
-        companyUrlInput = '';
-        contactInfoInput = '';
-        skillsetInput = '';
-        notesInput = '';
+        companyName.value = '';
+        companyField.value = '';
+        companyUrl.value = '';
+        contactInfo.value = '';
+        skillset.value = '';
+        notes.value = '';
     }
 
 })

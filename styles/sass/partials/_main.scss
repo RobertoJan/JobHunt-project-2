@@ -67,15 +67,23 @@ fieldset{
     }
     
     li {
-        border: 2px solid #fff;
+        border: 2px solid #002242;
         border-radius:10px;
         padding: 10px;
         text-align: center;
+        background: #002242;
+        box-shadow: 10px 5px 5px black;
         
 
         p {
             margin: 10px 0;
         }
+    }
+
+    li:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+        cursor: pointer;
     }
 }
 
