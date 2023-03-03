@@ -1,3 +1,6 @@
+@use "variables" as *;
+@use "mixins" as *;
+
 header {
     background: url(../assets/header-bg.jpg);
     background-size: cover;
@@ -5,26 +8,65 @@ header {
     height: 70vh;
     color: #fff;
 
-    .navBar{
+    .navContainer {
+        background-color: #000;
         position: fixed;
+        width: 100%;
+    }
+
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+
     }
 
     .flexItems {
         display: flex;
         justify-content: right;
-        gap: 20px;
-        padding-top: 10px;
+        
+        
 
         li {
             cursor:pointer;
         }
+
+        a {
+            padding: 10px 20px;
+        }
+
+        a:hover, a:focus {
+            color: $brightBlue;
+        }
+
+
     }
 
     .heading {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         height: 50vh;
+
+        h1 {
+            color: $primaryBlue;
+            @include headingStyle(5rem);
+            letter-spacing: 5px;
+            padding-top: 100px;
+        }
+
+        h4 {
+            @include headingStyle(2rem);
+            padding-top: 50px;
+            color: $secondaryBlue;
+        }
+    }
+
+
+    .logoContainer {
+        width: 110px;
+
     }
 }

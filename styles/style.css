@@ -233,8 +233,22 @@ header {
   height: 70vh;
   color: #fff;
 }
-header .navBar {
+header .navContainer {
+  background-color: #000;
   position: fixed;
+  width: 100%;
+}
+header .navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
 }
 header .flexItems {
   display: -webkit-box;
@@ -243,11 +257,15 @@ header .flexItems {
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
-  gap: 20px;
-  padding-top: 10px;
 }
 header .flexItems li {
   cursor: pointer;
+}
+header .flexItems a {
+  padding: 10px 20px;
+}
+header .flexItems a:hover, header .flexItems a:focus {
+  color: #00EBFF;
 }
 header .heading {
   display: -webkit-box;
@@ -257,13 +275,33 @@ header .heading {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 50vh;
+}
+header .heading h1 {
+  color: #003159;
+  line-height: 1.8rem;
+  font-weight: 700;
+  font-size: 5rem;
+  color: #003159;
+  letter-spacing: 5px;
+  padding-top: 100px;
+}
+header .heading h4 {
+  line-height: 1.8rem;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #003159;
+  padding-top: 50px;
+  color: #7a96c7;
+}
+header .logoContainer {
+  width: 110px;
 }
 
 html {

@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 @mixin headingStyle($fontSize) {
-    letter-spacing: 1.6rem;
+    line-height: 1.8rem;
     font-weight: 700;
     font-size: $fontSize;
     color: $primaryBlue;
