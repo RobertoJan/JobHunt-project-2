@@ -1,5 +1,5 @@
 import firebaseInfo from "./firebase.js";
-import {getDatabase, ref, push, onValue, get, remove, child} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+import {getDatabase, ref, push, onValue, get, remove, child, set} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
 
 const database = getDatabase(firebaseInfo);
 const dbRef = ref(database);
@@ -54,7 +54,6 @@ formElement.addEventListener("submit", function(e){
 
 })
 
-
 onValue(applicationsRef, function(data){
     if(data.exists()){
         const companyInfo = data.val();
@@ -87,9 +86,8 @@ onValue(applicationsRef, function(data){
             <p>Notes: ${companyNotes}</p>
             `
             button.innerHTML = `<i class="fa-regular fa-square"></i>`
-            button2.innerHTML = `<i class="fa-soild fa-x"></i>`
 
-            div.append(button, button2);
+            div.append(button);
             li.id = companyKey
             li.append(div);
             ulApp.append(li);
@@ -104,9 +102,18 @@ ulApp.addEventListener('click', function(e){
 
         console.log(e.target.parentElement.parentElement.parentElement);
         addToSubmitted(e.target.parentElement.parentElement.parentElement.id);
-    }
 
+        deleteFromApps(e.target.parentElement.parentElement.parentElement.id);
+    }
 })
+
+const deleteFromApps = (id) => {
+    
+    const userRef = ref(database, `applications/${id}`)
+    remove(userRef);
+    console.log(`you have successfully deleted ${id}`)
+}
+
 
 function updateSubmitted(icon){
     icon.classList.toggle('fa-check-square');
@@ -138,12 +145,10 @@ function addToSubmitted(companyKey){
             notes: notes,
             submitted: true
         }
-
         push(submissionsRef, submittedApps)
-
     })
-
 }
+
 
 onValue(submissionsRef, function(data){
     if(data.exists()){
@@ -176,13 +181,27 @@ onValue(submissionsRef, function(data){
             <p>Skills: ${companySkills}</p>
             <p>Notes: ${companyNotes}</p>
             `
-            button.innerHTML = `<i class="fa-regular fa-square"></i>`
-            button2.innerHTML = `<i class="fa-soild fa-x"></i>`
+            button.innerHTML = `<i class="fa-soild fa-x"></i>`
 
-            div.append(button, button2);
+            div.append(button);
             li.id = companyKey
             li.append(div);
             ulSub.append(li);
         }
+    } 
+    
+})
+
+
+ulSub.addEventListener('click', function(e){
+    if (e.target.tagName === 'I') {
+      deleteFromDb(e.target.parentElement.parentElement.parentElement.id);
     }
 })
+
+const deleteFromDb = (id) => {
+    
+    const userRef = ref(database, `submittedApps/${id}`)
+    remove(userRef);
+    console.log(`you have successfully deleted ${id}`)
+}
