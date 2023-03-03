@@ -227,9 +227,11 @@ html {
 }
 
 header {
-  background-color: #33ceff;
+  background-color: #f5f9ff;
+  background-size: cover;
+  background-repeat: no-repeat;
   height: 60vh;
-  color: #fff;
+  color: #003159;
   margin-bottom: 50px;
 }
 header div {
@@ -248,9 +250,13 @@ header div {
           align-items: center;
   height: 50vh;
 }
+header div h4 {
+  color: #7a96c7;
+}
 
 html {
   font-size: 125%;
+  font-family: "Fira Sans", sans-serif;
 }
 
 img {
@@ -288,4 +294,8 @@ textarea {
 h1, h2, h3, h4, h5, h6, p, a {
   margin: 0;
   padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Cormorant Garamond", serif;
 }

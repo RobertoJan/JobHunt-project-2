@@ -1,14 +1,22 @@
 header {
-    background-color: #33ceff;
+    background-color: #f5f9ff;
+    // background: url(../../../assets/header-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 60vh;
-    color: #fff;
+    color: #003159;
     div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 50vh;
+
+        h4 {
+            color: #7a96c7;
+        }
     }
 
     margin-bottom: 50px;
 }
+
