@@ -448,6 +448,9 @@ fieldset textarea {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font-size: 0.7rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 #ulApp button,
 #ulSub button {
