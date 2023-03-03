@@ -234,7 +234,7 @@ header {
   color: #fff;
 }
 header .navContainer {
-  background-color: #000;
+  background-color: #333333;
   position: fixed;
   width: 100%;
 }
@@ -426,6 +426,18 @@ fieldset textarea {
   display: flex;
   margin: 0 auto;
   padding: 10px 20px;
+  background: #2D6090;
+  color: #fff;
+  border: 2px solid #2D6090;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.gallery,
+.subbmittedGallery {
+  background: #2D6090;
+  color: #fff;
 }
 
 #ulApp,
@@ -438,13 +450,17 @@ fieldset textarea {
       flex-wrap: wrap;
   font-size: 0.7rem;
 }
+#ulApp button,
+#ulSub button {
+  color: #fff;
+}
 #ulApp h4,
 #ulSub h4 {
   font-size: 1rem;
 }
 #ulApp li,
 #ulSub li {
-  border: 2px solid black;
+  border: 2px solid #fff;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
@@ -454,8 +470,26 @@ fieldset textarea {
   margin: 10px 0;
 }
 
+#ulSub {
+  padding-bottom: 50px;
+}
+
 button {
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+footer {
+  background-color: #333333;
+  padding: 5px 0;
+  color: white;
+}
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }

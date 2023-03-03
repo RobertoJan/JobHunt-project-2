@@ -81,11 +81,11 @@ onValue(applicationsRef, function(data){
             const button2 = document.createElement('button');
 
             li.innerHTML = `<h4>Company: ${company}</h4>
-            <p>Field: ${companyField}</p>
-            <p>URL: ${companyLink}</p>
-            <p>Conacts: ${companyContact}</p>
-            <p>Skills: ${companySkills}</p>
-            <p>Notes: ${companyNotes}</p>
+            <p><strong>Field</strong>: ${companyField}</p>
+            <p><strong>URL</strong>: ${companyLink}</p>
+            <p><strong>Conacts</strong>: ${companyContact}</p>
+            <p><strong>Skills</strong>: ${companySkills}</p>
+            <p><strong>Notes</strong>: ${companyNotes}</p>
             `
             button.innerHTML = `<i class="fa-solid fa-check"></i>`
 
@@ -183,11 +183,11 @@ onValue(submissionsRef, function(data){
             const button2 = document.createElement('button');
 
             li.innerHTML = `<h4>Company: ${company}</h4>
-            <p>Field: ${companyField}</p>
-            <p>URL: ${companyLink}</p>
-            <p>Conacts: ${companyContact}</p>
-            <p>Skills: ${companySkills}</p>
-            <p>Notes: ${companyNotes}</p>
+            <p><strong>Field</strong>: ${companyField}</p>
+            <p><strong>URL</strong>: ${companyLink}</p>
+            <p><strong>Conacts</strong>: ${companyContact}</p>
+            <p><strong>Skills</strong>: ${companySkills}</p>
+            <p><strong>Notes</strong>: ${companyNotes}</p>
             `
             button.innerHTML = `<i class="fa-soild fa-x"></i>`
 
