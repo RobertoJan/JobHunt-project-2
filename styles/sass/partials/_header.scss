@@ -1,14 +1,28 @@
 header {
     background-color: #33ceff;
-    height: 60vh;
+    height: 70vh;
     color: #fff;
-    div {
+
+    .navBar{
+        position: fixed;
+    }
+
+    .flexItems {
+        display: flex;
+        justify-content: right;
+        gap: 20px;
+        padding-top: 10px;
+
+        li {
+            cursor:pointer;
+        }
+    }
+
+    .heading {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 50vh;
     }
-
-    margin-bottom: 50px;
 }

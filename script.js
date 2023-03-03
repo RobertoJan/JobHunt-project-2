@@ -87,7 +87,7 @@ onValue(applicationsRef, function(data){
             <p>Skills: ${companySkills}</p>
             <p>Notes: ${companyNotes}</p>
             `
-            button.innerHTML = `<i class="fa-regular fa-square"></i>`
+            button.innerHTML = `<i class="fa-solid fa-check"></i>`
 
             div.append(button);
             li.id = companyKey
@@ -106,7 +106,7 @@ onValue(applicationsRef, function(data){
 // Click to check the submitted data
 ulApp.addEventListener('click', function(e){
     if (e.target.tagName === 'I') {
-        updateSubmitted(e.target);
+        // updateSubmitted(e.target);
 
         console.log(e.target.parentElement.parentElement.parentElement);
         addToSubmitted(e.target.parentElement.parentElement.parentElement.id);
@@ -123,10 +123,10 @@ const deleteFromApps = (id) => {
 }
 
 
-function updateSubmitted(icon){
-    icon.classList.toggle('fa-check-square');
-    icon.parentElement.classList.toggle('text-muted');
-};
+// function updateSubmitted(icon){
+//     icon.classList.toggle('fa-check-square');
+//     icon.parentElement.classList.toggle('text-muted');
+// };
 
 
 // add the submitted pile
