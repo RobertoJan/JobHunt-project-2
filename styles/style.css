@@ -506,3 +506,37 @@ footer div {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+@media (max-width: 1000px) {
+  header .wrapper .heading h1 {
+    color: rgb(8, 12, 18);
+    font-size: 3.5rem;
+  }
+  header .wrapper .heading h4 {
+    font-size: 1.5rem;
+    color: silver;
+  }
+  .userInputs .wrapper div input {
+    width: 70%;
+  }
+  fieldset textarea {
+    width: 70%;
+  }
+}
+@media (max-width: 700px) {
+  header .wrapper .heading {
+    -webkit-box-align: self-start;
+        -ms-flex-align: self-start;
+            align-items: self-start;
+  }
+  header .navBar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .navBar .logoContainer {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}

@@ -1,0 +1,56 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+
+@media (max-width: 1000px) {
+
+    header {
+        .wrapper {
+            .heading {
+                h1{
+                    color:rgb(8, 12, 18);
+                    font-size: 3.5rem;
+                }
+                h4 {
+                    font-size: 1.5rem;
+                    color: silver;
+                    
+                }
+            }
+        }
+    }
+
+    .userInputs {
+        .wrapper {
+            div {
+                input {
+                    width: 70%;
+                }
+            }
+        }
+    }
+    fieldset{
+        textarea{
+            width:70%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        .wrapper { 
+            .heading {
+                align-items: self-start;
+            }
+        }
+
+        .navBar {
+            flex-direction: column;
+           
+
+            .logoContainer {
+                align-self: flex-start;
+            }
+        }
+    }
+}
