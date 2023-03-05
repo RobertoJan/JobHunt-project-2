@@ -298,6 +298,7 @@ header .heading h4 {
   color: #003159;
   padding-top: 50px;
   color: #7a96c7;
+  padding-bottom: 10%;
 }
 header .logoContainer {
   width: 110px;
@@ -535,8 +536,12 @@ footer div {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  header .navBar .logoContainer {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
+  header .navBar .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }

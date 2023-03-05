@@ -48,8 +48,9 @@
             flex-direction: column;
            
 
-            .logoContainer {
-                align-self: flex-start;
+            .header {
+                display:flex;
+                align-items: center;
             }
         }
     }

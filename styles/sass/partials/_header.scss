@@ -60,6 +60,7 @@ header {
             @include headingStyle(2rem);
             padding-top: 50px;
             color: $secondaryBlue;
+            padding-bottom: 10%;
         }
     }
 
