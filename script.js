@@ -61,8 +61,6 @@ onValue(applicationsRef, function(data){
 
         ulApp.innerHTML ="";
 
-        let counter = 0
-
         for (let key in companyInfo){
             // console.log(key)
             const company = companyInfo[key].companyName;

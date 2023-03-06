@@ -302,6 +302,11 @@ header .logoContainer {
   width: 110px;
 }
 
+/* Hide the links inside the navigation menu (except for logo/home) */
+#myLinks {
+  display: none;
+}
+
 html {
   font-size: 125%;
   font-family: "Fira Sans", sans-serif;
@@ -539,6 +544,12 @@ dialog p {
   color: white;
 }
 
+@media (max-width: 1200px) {
+  #ulApp li,
+  #ulSub li {
+    width: 30%;
+  }
+}
 @media (max-width: 1000px) {
   header .wrapper .heading h1 {
     color: rgb(8, 12, 18);
@@ -556,11 +567,6 @@ dialog p {
   }
 }
 @media (max-width: 700px) {
-  header .wrapper .heading {
-    -webkit-box-align: self-start;
-        -ms-flex-align: self-start;
-            align-items: self-start;
-  }
   header .navBar {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -574,5 +580,11 @@ dialog p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  #ulApp li,
+  #ulSub li {
+    width: 80%;
   }
 }

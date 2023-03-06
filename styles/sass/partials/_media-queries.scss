@@ -2,6 +2,16 @@
 @use "mixins" as *;
 
 
+@media (max-width: 1200px) {
+    #ulApp,
+    #ulSub {
+        li {
+            width: 30%;
+        }
+    }
+}
+
+
 @media (max-width: 1000px) {
 
     header {
@@ -38,12 +48,6 @@
 
 @media (max-width: 700px) {
     header {
-        .wrapper { 
-            .heading {
-                align-items: self-start;
-            }
-        }
-
         .navBar {
             flex-direction: column;
            
@@ -52,6 +56,15 @@
                 display:flex;
                 align-items: center;
             }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #ulApp,
+    #ulSub {
+        li {
+            width: 80%;
         }
     }
 }
