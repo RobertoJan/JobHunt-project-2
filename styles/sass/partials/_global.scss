@@ -1,5 +1,9 @@
+@use 'variables' as *;
+@use './mixins' as *;
+
 html {
     font-size: 125%;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 img {
@@ -18,9 +22,14 @@ ul {
     padding: 0px;
 }
 
+input,
+textarea {
+    border: none;
+}
+
 .wrapper {
-    width: 80%;
-    max-width: 1200px;
+    width: 85%;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -34,8 +43,45 @@ textarea {
     resize: none;
 }
 
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover,
+a:focus,
+button:hover,
+button:focus {
+    opacity: 0.7;
+   
+}
+
+.fa-x {
+    color: red;
+}
+
+.fa-check {
+    color: green;
+}
+
 // TYPOGRAPHY Styles 
 h1, h2, h3, h4, h5, h6, p, a {
     margin: 0;
     padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+p,
+a,
+input,
+textarea {
+    font-family: 'Lora', serif;
+    @include bodyText(0.7rem);
+}
+
+button {
+    font-family: 'Lora', serif;
 }

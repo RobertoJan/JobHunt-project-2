@@ -5,62 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,400;1,700&family=Fira+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@0;1&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
 
 </head>
 <body>
     <header>
-        <div>
-            <h1>JobHunt</h1>
-            <h4>Lorem ipsum dolor sit amet.</h4>
+        <div class="navContainer">
+            <nav class="navBar wrapper">
+                <div class="logoContainer">
+                    <a href="./index.html"><img src="./assets/logo.png" alt="JobHunt Logo"></a>
+                </div>
+
+                <a href="#/" class="toggleButton">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                
+                <ul class="flexItems">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="#formSection">Form</a></li>
+                    <li><a href="#applications">Apps</a></li>
+                    <li><a href="#submittedApps">Subs</a></li>
+                </ul>
+
+            </nav>
+        </div>
+        <div class="wrapper">
+            <div class="heading">
+                <h1>JobHunt</h1>
+                <h4>Your Dream Job Awaits</h4>
+            </div>
+
         </div>
     </header>
     <main>
-        <section class="userInputs">
+        <section id="formSection" class="userInputs">
             <div class="wrapper">
-                <h2>Job Submissions!</h2>
+                <h2 id="form">Take Action</h2>
 
                 <form action="#" method="post" name="commentForm">
                     <div>
                         <lable for="companyName" class="sr-only">Company</lable>
-                        <input type="text" placeholder="Company" id="companyName" required>
+                        <input type="text" placeholder="Company" id="companyName">
 
-                        <lable for="companyField" class="sr-only">CompanyField</lable>
-                        <input type="text" placeholder="Field" id="companyField" required>
+                        <lable for="companyField" class="sr-only">Job Title</lable>
+                        <input type="text" placeholder="Job Title" id="companyField">
                     </div>  
 
                     <div>
                         <lable for="companyUrl" class="sr-only">Url</lable>
-                        <input type="text" placeholder="Url" id="companyUrl" required>
+                        <input type="text" placeholder="Url" id="companyUrl">
 
                         <lable for="contactInfo" class="sr-only">Contact Info</lable>
-                        <input type="text" placeholder="Contact Info" id="contactInfo" required>
+                        <input type="text" placeholder="Contact Info" id="contactInfo">
+                    
+
+                        <lable for="skillset" class="sr-only">Skillset</lable>
+                        <input type="text" placeholder="Skills" id="skillset">
+
                     </div>
 
-                    <lable for="skillset" class="sr-only">Skillset</lable>
-                    <input type="text" placeholder="Skills" id="Skillset" required>
+                    <fieldset>
+                        <label for="notes"></label>
+                        <textarea name="notes" id="notes" placeholder="Notes" cols="250" rows="5" minlength="5" maxlength="1000"></textarea>
+                    </fieldset>
 
-                    <label for="notes"></label>
-                    <textarea name="notes" id="notes" placeholder="notes" cols="150" rows="5" minlength="5" maxlength="200"></textarea>
-
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="submitButton">Submit</button>
                 </form>
 
             </div>
         </section>
-        <section class="gallery">
+        <section id="applications" class="gallery">
             <div class="wrapper">
-                <h2>Pending Applications!</h2>
-                <ul>
+                <h2>Applications</h2>
+                <ul id="ulApp">
+                </ul>
+            </div>
+        </section>
+        <section id="submittedApps" class="subbmittedGallery">
+            <div class="wrapper">
+                <h2>Submissions</h2>
+                <ul id="ulSub">
                     
                 </ul>
             </div>
-
         </section>
     </main>
     <footer>
-        <p>Created at Juno College</p>
+        <div class="wrapper">
+            <p>Created @ Juno College</p>
+        </div>
     </footer>
+    <script src="https://kit.fontawesome.com/5479c1fd3b.js" crossorigin="anonymous"></script>
     <script type="module" src="./script.js">
 
     </script>

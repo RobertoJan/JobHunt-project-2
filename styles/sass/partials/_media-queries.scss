@@ -1,0 +1,75 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+@media (max-width: 1200px) {
+    #ulApp,
+    #ulSub {
+        li {
+            width: 30%;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+
+    header {
+        .wrapper {
+            .heading {
+                h1{
+                    color:rgb(8, 12, 18);
+                    font-size: 3.5rem;
+                }
+                h4 {
+                    font-size: 1.5rem;
+                    color: silver;
+                    
+                }
+            }
+        }
+    }
+
+    .userInputs {
+        .wrapper {
+            div {
+                input {
+                    width: 70%;
+                }
+            }
+        }
+    }
+    fieldset{
+        textarea{
+            width:70%;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    header{
+        
+        nav {
+            flex-direction: column;
+        }
+
+        .toggleButton {
+            display: flex !important;
+        }
+
+        .flexItems {
+            display: none;
+            padding-top: 10px;
+        }
+        
+        .flexItems.active {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    #ulApp,
+    #ulSub {
+        li {
+            width: 80%;
+        }
+    }
+}

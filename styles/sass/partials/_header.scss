@@ -1,12 +1,64 @@
+@use "variables" as *;
+@use "mixins" as *;
+
 header {
-    background-color: #33ceff;
-    height: 100vh;
+    background: url(../assets/header-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
     color: #fff;
-    div {
+
+    .navContainer {
+        background-color: #333333;
+        position: fixed;
+        width: 100%;
+    }
+
+    .navBar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+
+    }
+
+    .flexItems {
+        display: flex;
+        justify-content: right;
+        
+        li {
+            cursor:pointer;
+        }
+
+        a {
+            padding: 20px 20px;
+        }
+    }
+
+    .heading {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         height: 50vh;
+
+        h1 {
+            color: $primaryBlue;
+            @include headingStyle(5rem);
+            letter-spacing: 5px;
+            padding-top: 100px;
+        }
+
+        h4 {
+            @include headingStyle(2rem);
+            padding-top: 50px;
+            color: $secondaryBlue;
+            padding-bottom: 10%;
+        }
+    }
+
+    .logoContainer {
+        width: 110px;
+
     }
 }
