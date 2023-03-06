@@ -80,9 +80,9 @@ fieldset{
         background: #002242;
         box-shadow: 10px 5px 5px black;
         width: 15%;
-        overflow: hidden;
-      
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         p {
             margin: 10px 0;
