@@ -50,6 +50,9 @@ formElement.addEventListener("submit", function(e){
         contactInfo.value = '';
         skillset.value = '';
         notes.value = '';
+
+    } else {
+        alert(`Please fill out all the fields. For any missing info, put 'NA'` )
     }
 
 })
@@ -72,7 +75,7 @@ onValue(applicationsRef, function(data){
             const companyKey = key;
 
             // console.log(company, companyContact, companyLink, companyField, companySkills, companyNotes)
-
+            
             const li = document.createElement('li');
             const div = document.createElement('div');
             const button = document.createElement('button');
@@ -86,11 +89,11 @@ onValue(applicationsRef, function(data){
             <dialog class="modal" id="modal">
                 <button class="button closeButton">
                 <h4>Company: ${company}</h4>
-            <p><strong>Job Title</strong>: ${companyField}</p>
-            <p><strong>URL</strong>: ${companyLink}</p>
-            <p><strong>Conacts</strong>: ${companyContact}</p>
-            <p><strong>Skills</strong>: ${companySkills}</p>
-            <p><strong>Notes</strong>: ${companyNotes}</p>
+                <p><strong>Job Title</strong>: ${companyField}</p>
+                <p><strong>URL</strong>: ${companyLink}</p>
+                <p><strong>Conacts</strong>: ${companyContact}</p>
+                <p><strong>Skills</strong>: ${companySkills}</p>
+                <p><strong>Notes</strong>: ${companyNotes}</p>
                 </button>
             </dialog>
             `
@@ -134,7 +137,7 @@ ulApp.addEventListener('click', function(e){
     if (e.target.tagName === 'I') {
         // updateSubmitted(e.target);
 
-        console.log(e.target.parentElement.parentElement.parentElement);
+        // console.log(e.target.parentElement.parentElement.parentElement);
         addToSubmitted(e.target.parentElement.parentElement.parentElement.id);
 
         deleteFromApps(e.target.parentElement.parentElement.parentElement.id);
@@ -152,11 +155,11 @@ const deleteFromApps = (id) => {
 
 // add the submitted pile
 function addToSubmitted(companyKey){
-    console.log(companyKey);
+    // console.log(companyKey);
     get(child(applicationsRef, `/${companyKey}`)).then(function(snapshot){
 
         const selectedApplication = snapshot.val();
-        console.log(selectedApplication)
+        // console.log(selectedApplication)
 
         const name = selectedApplication.companyName;
         const field = selectedApplication.field;
@@ -211,11 +214,11 @@ onValue(submissionsRef, function(data){
             <dialog class="modal" id="modal">
                 <button class="button closeButton">
                 <h4>Company: ${company}</h4>
-            <p><strong>Job Title</strong>: ${companyField}</p>
-            <p><strong>URL</strong>: ${companyLink}</p>
-            <p><strong>Conacts</strong>: ${companyContact}</p>
-            <p><strong>Skills</strong>: ${companySkills}</p>
-            <p><strong>Notes</strong>: ${companyNotes}</p>
+                <p><strong>Job Title</strong>: ${companyField}</p>
+                <p><strong>URL</strong>: ${companyLink}</p>
+                <p><strong>Conacts</strong>: ${companyContact}</p>
+                <p><strong>Skills</strong>: ${companySkills}</p>
+                <p><strong>Notes</strong>: ${companyNotes}</p>
                 </button>
             </dialog>
             `

@@ -361,6 +361,14 @@ button:focus {
   opacity: 0.7;
 }
 
+.fa-x {
+  color: red;
+}
+
+.fa-check {
+  color: green;
+}
+
 h1, h2, h3, h4, h5, h6, p, a {
   margin: 0;
   padding: 0;
@@ -479,6 +487,7 @@ fieldset textarea {
   -webkit-box-shadow: 10px 5px 5px black;
           box-shadow: 10px 5px 5px black;
   width: 15%;
+  overflow: hidden;
 }
 #ulApp li p,
 #ulSub li p {
