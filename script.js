@@ -80,13 +80,13 @@ onValue(applicationsRef, function(data){
             const button = document.createElement('button');
 
             li.innerHTML = 
-            `<button class= "button open-button">
+            `<button class= "button openButton">
                 <h4>${company}</h4>
                 <p><strong>Job Title</strong>: ${companyField}</p>
             </button>
 
             <dialog class="modal" id="modal">
-                <button class="button close-button inner-button">
+                <button class="button closeButton">
                 <h4>Company: ${company}</h4>
             <p><strong>Job Title</strong>: ${companyField}</p>
             <p><strong>URL</strong>: ${companyLink}</p>
@@ -97,7 +97,7 @@ onValue(applicationsRef, function(data){
             </dialog>
             `
 
-            console.log(button)
+            // console.log(button)
             button.innerHTML = `<i class="fa-solid fa-check"></i>`
 
             div.append(button);
@@ -107,8 +107,8 @@ onValue(applicationsRef, function(data){
 
             const modal = document.querySelectorAll('#modal');
     
-            const openModal = document.querySelectorAll('.open-button');
-            const closeModal = document.querySelectorAll('.close-button');
+            const openModal = document.querySelectorAll('.openButton');
+            const closeModal = document.querySelectorAll('.closeButton');
 
             for (let i = 0; i < openModal.length; i++){
                 openModal[i].addEventListener('click', function(){
@@ -147,7 +147,7 @@ const deleteFromApps = (id) => {
     
     const userRef = ref(database, `applications/${id}`)
     remove(userRef);
-    console.log(`you have successfully deleted ${id}`)
+    // console.log(`you have successfully deleted ${id}`)
 }
 
 
@@ -205,13 +205,13 @@ onValue(submissionsRef, function(data){
             const button = document.createElement('button');
 
             li.innerHTML = 
-            `<button class= "button open-button">
+            `<button class= "button openButton">
                 <h4>${company}</h4>
                 <p><strong>Job Title</strong>: ${companyField}</p>
             </button>
 
             <dialog class="modal" id="modal">
-                <button class="button close-button inner-button">
+                <button class="button closeButton">
                 <h4>Company: ${company}</h4>
             <p><strong>Job Title</strong>: ${companyField}</p>
             <p><strong>URL</strong>: ${companyLink}</p>
@@ -231,8 +231,8 @@ onValue(submissionsRef, function(data){
             ulSub.append(li);
 
             const modal = document.querySelectorAll('#modal')
-            const openModal = document.querySelectorAll('.open-button');
-            const closeModal = document.querySelectorAll('.close-button');
+            const openModal = document.querySelectorAll('.openButton');
+            const closeModal = document.querySelectorAll('.closeButton');
 
             for (let i = 0; i < openModal.length; i++){
                 openModal[i].addEventListener('click', function(){
