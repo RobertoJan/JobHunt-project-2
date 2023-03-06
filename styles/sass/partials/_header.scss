@@ -18,6 +18,7 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 10px 0;
 
     }
 
@@ -33,10 +34,6 @@ header {
 
         a {
             padding: 20px 20px;
-        }
-
-        a:hover, a:focus {
-            color: $brightBlue;
         }
 
 

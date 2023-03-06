@@ -21,13 +21,17 @@ h2 {
     }
 }
 
+form {
+    padding-bottom: 30px
+}
+
 fieldset{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
 
     textarea{
-        width:40%;
+        width: 40%;
         padding: 10px;
     }
 }
@@ -36,9 +40,9 @@ fieldset{
     display: flex;
     margin: 0 auto;
     padding: 10px 20px;
-    background: #2D6090;
+    background: #3b70a1;
     color: #fff;
-    border: 2px solid #2D6090;
+    border: 2px solid #3b70a1;
     font-size:0.8rem;
     margin-bottom: 20px;
     font-weight: 700;
@@ -47,7 +51,7 @@ fieldset{
 
 .gallery,
 .subbmittedGallery {
-    background: #2D6090;
+    background: #3b70a1;
     color: #fff;
 }
 
@@ -65,6 +69,7 @@ fieldset{
 
     h4 {
         font-size: 1rem; 
+        font-family: 'Lora', serif;
     }
     
     li {
@@ -74,6 +79,8 @@ fieldset{
         text-align: center;
         background: #002242;
         box-shadow: 10px 5px 5px black;
+        width: 15%;
+      
         
 
         p {
@@ -85,6 +92,12 @@ fieldset{
         transform: scale(1.1);
         transition: 0.5s;
         cursor: pointer;
+    }
+}
+
+.gallery {
+    h2 {
+        padding-top: 40px;
     }
 }
 
@@ -108,4 +121,23 @@ footer {
         justify-content: center;
     }
     
+}
+
+.modal::backdrop {
+    background: #333333;
+    opacity: 0.8;
+}
+
+dialog {
+    border:none;
+    
+}
+
+dialog {
+    border-radius:10px;
+    background-color: #3b70a1;
+    h4,
+    p {
+    color: white;
+    }
 }

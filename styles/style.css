@@ -248,6 +248,7 @@ header .navBar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px 0;
 }
 header .flexItems {
   display: -webkit-box;
@@ -262,9 +263,6 @@ header .flexItems li {
 }
 header .flexItems a {
   padding: 20px 20px;
-}
-header .flexItems a:hover, header .flexItems a:focus {
-  color: #00EBFF;
 }
 header .heading {
   display: -webkit-box;
@@ -406,8 +404,12 @@ h2 {
   width: 40%;
 }
 
+form {
+  padding-bottom: 30px;
+}
+
 fieldset {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -426,9 +428,9 @@ fieldset textarea {
   display: flex;
   margin: 0 auto;
   padding: 10px 20px;
-  background: #2D6090;
+  background: #3b70a1;
   color: #fff;
-  border: 2px solid #2D6090;
+  border: 2px solid #3b70a1;
   font-size: 0.8rem;
   margin-bottom: 20px;
   font-weight: 700;
@@ -436,7 +438,7 @@ fieldset textarea {
 
 .gallery,
 .subbmittedGallery {
-  background: #2D6090;
+  background: #3b70a1;
   color: #fff;
 }
 
@@ -460,6 +462,7 @@ fieldset textarea {
 #ulApp h4,
 #ulSub h4 {
   font-size: 1rem;
+  font-family: "Lora", serif;
 }
 #ulApp li,
 #ulSub li {
@@ -470,6 +473,7 @@ fieldset textarea {
   background: #002242;
   -webkit-box-shadow: 10px 5px 5px black;
           box-shadow: 10px 5px 5px black;
+  width: 15%;
 }
 #ulApp li p,
 #ulSub li p {
@@ -482,6 +486,10 @@ fieldset textarea {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
+}
+
+.gallery h2 {
+  padding-top: 40px;
 }
 
 #ulSub {
@@ -506,6 +514,29 @@ footer div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.modal::-webkit-backdrop {
+  background: #333333;
+  opacity: 0.8;
+}
+
+.modal::backdrop {
+  background: #333333;
+  opacity: 0.8;
+}
+
+dialog {
+  border: none;
+}
+
+dialog {
+  border-radius: 10px;
+  background-color: #3b70a1;
+}
+dialog h4,
+dialog p {
+  color: white;
 }
 
 @media (max-width: 1000px) {

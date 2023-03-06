@@ -78,30 +78,58 @@ onValue(applicationsRef, function(data){
             const li = document.createElement('li');
             const div = document.createElement('div');
             const button = document.createElement('button');
-            const button2 = document.createElement('button');
 
-            li.innerHTML = `<h4>Company: ${company}</h4>
-            <p><strong>Field</strong>: ${companyField}</p>
+            li.innerHTML = 
+            `<button class= "button open-button">
+                <h4>${company}</h4>
+                <p><strong>Job Title</strong>: ${companyField}</p>
+            </button>
+
+            <dialog class="modal" id="modal">
+                <button class="button close-button inner-button">
+                <h4>Company: ${company}</h4>
+            <p><strong>Job Title</strong>: ${companyField}</p>
             <p><strong>URL</strong>: ${companyLink}</p>
             <p><strong>Conacts</strong>: ${companyContact}</p>
             <p><strong>Skills</strong>: ${companySkills}</p>
             <p><strong>Notes</strong>: ${companyNotes}</p>
+                </button>
+            </dialog>
             `
+
+            console.log(button)
             button.innerHTML = `<i class="fa-solid fa-check"></i>`
 
             div.append(button);
             li.id = companyKey
             li.append(div);
             ulApp.append(li);
-            
+
+            const modal = document.querySelectorAll('#modal');
+    
+            const openModal = document.querySelectorAll('.open-button');
+            const closeModal = document.querySelectorAll('.close-button');
+
+            for (let i = 0; i < openModal.length; i++){
+                openModal[i].addEventListener('click', function(){
+                    modal[i].showModal();
+                })
+            }
+
+            for (let i = 0; i < closeModal.length; i++){
+                closeModal[i].addEventListener('click', function(){
+                    modal[i].close();
+                })
+            }
         }
     } else{
         
-        ulApp.innerHTML="Please try harder"
+        ulApp.innerHTML="Git Applying!"
 
 
     }
 })
+
 
 // Click to check the submitted data
 ulApp.addEventListener('click', function(e){
@@ -122,11 +150,6 @@ const deleteFromApps = (id) => {
     console.log(`you have successfully deleted ${id}`)
 }
 
-
-// function updateSubmitted(icon){
-//     icon.classList.toggle('fa-check-square');
-//     icon.parentElement.classList.toggle('text-muted');
-// };
 
 
 // add the submitted pile
@@ -180,24 +203,54 @@ onValue(submissionsRef, function(data){
             const li = document.createElement('li');
             const div = document.createElement('div');
             const button = document.createElement('button');
-            const button2 = document.createElement('button');
 
-            li.innerHTML = `<h4>Company: ${company}</h4>
-            <p><strong>Field</strong>: ${companyField}</p>
+            li.innerHTML = 
+            `<button class= "button open-button">
+                <h4>${company}</h4>
+                <p><strong>Job Title</strong>: ${companyField}</p>
+            </button>
+
+            <dialog class="modal" id="modal">
+                <button class="button close-button inner-button">
+                <h4>Company: ${company}</h4>
+            <p><strong>Job Title</strong>: ${companyField}</p>
             <p><strong>URL</strong>: ${companyLink}</p>
             <p><strong>Conacts</strong>: ${companyContact}</p>
             <p><strong>Skills</strong>: ${companySkills}</p>
             <p><strong>Notes</strong>: ${companyNotes}</p>
+                </button>
+            </dialog>
             `
+
+            
             button.innerHTML = `<i class="fa-soild fa-x"></i>`
 
             div.append(button);
             li.id = companyKey
             li.append(div);
             ulSub.append(li);
+
+            const modal = document.querySelectorAll('#modal')
+            const openModal = document.querySelectorAll('.open-button');
+            const closeModal = document.querySelectorAll('.close-button');
+
+            for (let i = 0; i < openModal.length; i++){
+                openModal[i].addEventListener('click', function(){
+                    modal[i].showModal();
+                })
+            }
+
+            for (let i = 0; i < closeModal.length; i++){
+                closeModal[i].addEventListener('click', function(){
+                    modal[i].close();
+                })
+            }
+            
+
         }
+
     } else {
-        ulSub.innerHTML = 'This should not be empty....'
+        ulSub.innerHTML = 'Lookin Kinda Empty....'
     }
     
 })
