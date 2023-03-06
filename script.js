@@ -99,7 +99,7 @@ onValue(applicationsRef, function(data){
             button.innerHTML = `<i class="fa-solid fa-check"></i>`
 
             div.append(button);
-            li.id = companyKey
+            li.id = companyKey;
             li.append(div);
             ulApp.append(li);
 
@@ -264,5 +264,14 @@ const deleteFromDb = (id) => {
     
     const userRef = ref(database, `submittedApps/${id}`)
     remove(userRef);
-    console.log(`you have successfully deleted ${id}`)
+    // console.log(`you have successfully deleted ${id}`)
 }
+
+
+// Ham Menu
+const toggleButton = document.querySelector('.toggleButton');
+const flexItems = document.querySelector('.flexItems')
+
+toggleButton.addEventListener('click', () =>{
+    flexItems.classList.toggle('active')
+})

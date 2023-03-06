@@ -47,24 +47,38 @@
 }
 
 @media (max-width: 700px) {
-    header {
-        .navBar {
+    header{
+        
+        nav {
             flex-direction: column;
-           
+        }
 
-            .header {
-                display:flex;
-                align-items: center;
-            }
+        .toggleButton {
+            display: flex !important;
+        }
+
+        .flexItems {
+            display: none;
+            padding-top: 10px;
+        }
+        
+        .flexItems.active {
+            display: flex;
+            flex-direction: column;
         }
     }
-}
 
-@media (max-width: 600px) {
     #ulApp,
     #ulSub {
         li {
             width: 80%;
         }
     }
+
+
+    
+
+
+            
+    
 }
