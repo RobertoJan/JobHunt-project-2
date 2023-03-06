@@ -599,7 +599,7 @@ dialog p {
 header .toggleButton {
   position: absolute;
   top: 0.6rem;
-  right: 3rem;
+  right: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
