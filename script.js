@@ -54,18 +54,15 @@ formElement.addEventListener("submit", function(e){
     } else {
         alert(`Please fill out all the fields. For any missing info, put 'NA'` )
     }
-
 })
 
 onValue(applicationsRef, function(data){
     if(data.exists()){
         const companyInfo = data.val();
-        // console.log(companyInfo)
 
         ulApp.innerHTML ="";
 
         for (let key in companyInfo){
-            // console.log(key)
             const company = companyInfo[key].companyName;
             const companyContact = companyInfo[key].contactInfo;
             const companyLink = companyInfo[key].link;
@@ -73,8 +70,6 @@ onValue(applicationsRef, function(data){
             const companySkills = companyInfo[key].skills;
             const companyNotes = companyInfo[key].notes;
             const companyKey = key;
-
-            // console.log(company, companyContact, companyLink, companyField, companySkills, companyNotes)
             
             const li = document.createElement('li');
             const div = document.createElement('div');
@@ -97,8 +92,6 @@ onValue(applicationsRef, function(data){
                 </button>
             </dialog>
             `
-
-            // console.log(button)
             button.innerHTML = `<i class="fa-solid fa-check"></i>`
 
             div.append(button);
@@ -123,11 +116,8 @@ onValue(applicationsRef, function(data){
                 })
             }
         }
-    } else{
-        
+    } else {
         ulApp.innerHTML="Git Applying!"
-
-
     }
 })
 
@@ -135,9 +125,6 @@ onValue(applicationsRef, function(data){
 // Click to check the submitted data
 ulApp.addEventListener('click', function(e){
     if (e.target.tagName === 'I') {
-        // updateSubmitted(e.target);
-
-        // console.log(e.target.parentElement.parentElement.parentElement);
         addToSubmitted(e.target.parentElement.parentElement.parentElement.id);
 
         deleteFromApps(e.target.parentElement.parentElement.parentElement.id);
@@ -148,18 +135,15 @@ const deleteFromApps = (id) => {
     
     const userRef = ref(database, `applications/${id}`)
     remove(userRef);
-    // console.log(`you have successfully deleted ${id}`)
 }
 
 
 
 // add the submitted pile
 function addToSubmitted(companyKey){
-    // console.log(companyKey);
     get(child(applicationsRef, `/${companyKey}`)).then(function(snapshot){
 
         const selectedApplication = snapshot.val();
-        // console.log(selectedApplication)
 
         const name = selectedApplication.companyName;
         const field = selectedApplication.field;
@@ -185,12 +169,10 @@ function addToSubmitted(companyKey){
 onValue(submissionsRef, function(data){
     if(data.exists()){
         const companyInfo = data.val();
-        // console.log(companyInfo)
 
         ulSub.innerHTML ="";
 
         for (let key in companyInfo){
-            // console.log(key)
             const company = companyInfo[key].companyName;
             const companyContact = companyInfo[key].contactInfo;
             const companyLink = companyInfo[key].link;
@@ -198,8 +180,6 @@ onValue(submissionsRef, function(data){
             const companySkills = companyInfo[key].skills;
             const companyNotes = companyInfo[key].notes;
             const companyKey = key;
-
-            // console.log(company, companyContact, companyLink, companyField, companySkills, companyNotes)
 
             const li = document.createElement('li');
             const div = document.createElement('div');
@@ -223,7 +203,6 @@ onValue(submissionsRef, function(data){
             </dialog>
             `
 
-            
             button.innerHTML = `<i class="fa-soild fa-x"></i>`
 
             div.append(button);
@@ -246,8 +225,6 @@ onValue(submissionsRef, function(data){
                     modal[i].close();
                 })
             }
-            
-
         }
 
     } else {
@@ -264,10 +241,8 @@ ulSub.addEventListener('click', function(e){
 })
 
 const deleteFromDb = (id) => {
-    
     const userRef = ref(database, `submittedApps/${id}`)
     remove(userRef);
-    // console.log(`you have successfully deleted ${id}`)
 }
 
 

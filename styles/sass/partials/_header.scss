@@ -26,8 +26,6 @@ header {
         display: flex;
         justify-content: right;
         
-        
-
         li {
             cursor:pointer;
         }
@@ -35,8 +33,6 @@ header {
         a {
             padding: 20px 20px;
         }
-
-
     }
 
     .heading {
@@ -61,16 +57,8 @@ header {
         }
     }
 
-
     .logoContainer {
         width: 110px;
 
     }
 }
-
-
-  /* Hide the links inside the navigation menu (except for logo/home) */
-#myLinks {
-    display: none;
-}
-
